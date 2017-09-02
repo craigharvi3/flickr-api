@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "ajax-promise": "^0.8.1",
+    "bluebird": "^3.5.0",
     "express": "^4.15.3",
     "node-jsonp": "^1.0.2",
     "react": "^15.3.2",

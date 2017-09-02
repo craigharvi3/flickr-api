@@ -1,4 +1,5 @@
 const AjaxPromise = require('ajax-promise');
+const Promise = require("bluebird");
 
 const Photos = {
   get: (tag=null) => {
