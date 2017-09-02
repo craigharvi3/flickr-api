@@ -1,0 +1,213 @@
+.list-items {
+  width: 100%;
+
+  &:after {
+    content: '';
+    display: block;
+    clear: both
+  }
+
+  figure {
+    position: relative;
+    display: inline-block;
+    &:after {
+      content: '';
+      display: block;
+      clear: both
+    }
+
+    img {
+      height: auto;
+    }
+  }
+
+  figure, figure img {
+    width: 100%;
+    float: left;
+  }
+
+  .box-item {
+    position: relative;
+    width: 100%;
+    -webkit-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+
+    &:after {
+      content: '';
+      display: block;
+      clear: both
+    }
+
+    .content {
+      padding: 20px;
+
+      &.no-top {
+        padding-top: 0;
+      }
+
+      &.small-bottom {
+        padding-bottom: 10px;
+      }
+    }
+  }
+
+  .box-info {
+    position: relative;
+    clear: both;
+    background-color: $white;
+    border-top: 0;
+
+    &:after {
+      content: '';
+      display: block;
+      clear: both
+    }
+
+    p {
+      color: lighten($black, 20%);
+    }
+
+    h4 {
+      font-size: 1em;
+      margin-bottom: 8px;
+
+      &.big {
+        font-size: 1.2em;
+      }
+
+      a {
+        line-height: 1.4;
+      }
+    }
+
+    .row {
+      margin-bottom: 12px;
+      overflow: hidden;
+      word-wrap: break-word;
+
+      &:last-child {
+        margin-bottom: 0
+      }
+
+      &:first-child {
+        height: inherit;
+        white-space: inherit
+      }
+    }
+
+    .footer {
+      padding: 0 20px 20px 20px;
+      font-size: 14px;
+      color: darken($grey-light, 10%);
+      overflow: hidden;
+      word-wrap: break-word;
+
+      &:after {
+        content: '';
+        display: block;
+        clear: both
+      }
+
+      p {
+        font-size: 0.9em;
+        color: darken($grey-light, 10%);
+      }
+    }
+  }
+
+  .tag {
+    display: inline-block;
+    margin-left: 0.6em;
+    padding: 5px;
+    background: $grey-light;
+    color: $grey-dark;
+    margin-bottom: 0.6em;
+    border-radius: 3px;
+  }
+}
+
+.list-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+  [class*=col-], [class*=cols-] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+  }
+
+  .box-item, .box-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+  }
+
+  .box-info, .box-info .content {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1
+  }
+}
+
+.list-items-empty {
+  padding: 1em;
+  margin-top: 1em;
+  background: $white-dark;
+}
+
+.rollover {
+  background: white;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: transparent;
+    opacity: 0;
+    z-index: 0;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out
+  }
+
+  .img {
+    position: relative;
+    z-index: 1;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+
+  &:hover:after {
+    opacity: 1
+  }
+
+  &:hover .img {
+    opacity: .7;
+
+    .hover-item {
+      visibility: visible;
+      opacity: 1
+    }
+  }
+}

@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+/* Our styling */
+@import
+  'partials/reset',
+  'partials/variables',
+  'partials/slat',
+  'partials/form',
+  'partials/grid',
+  'partials/loader',
+  'partials/list'
+  ;
+
+body {
+  background: $grey-light;
+  color: $grey-dark;
+  font-family: $fontFamily;
+  font-size: 15px;
+}
+
+* {
+  font-size: 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: $teal;
+  text-decoration: none;
+
+  &:hover {
+    color: lighten($grey-dark, 30%);
+  }
+}
+
+p {
+  line-height: 1.4;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  padding: 1em 0;
+}
+
+.not-found {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  max-width: 320px;
+  padding: 1em;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  h3 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 0 1em;
+
+  &.small {
+    max-width: 900px;
+  }
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}

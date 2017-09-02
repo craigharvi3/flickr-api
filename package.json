@@ -1,0 +1,44 @@
+{
+  "name": "flickr-api",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "NODE_ENV=dev ./node_modules/.bin/nodemon server",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "./node_modules/.bin/webpack --config webpack.config.js --watch",
+    "bundle": "./node_modules/.bin/webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/craigharvi3/flickr-api.git"
+  },
+  "author": "Craig Harvie <craig@craigharvie.me> (http://craigharvie.me)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/craigharvi3/flickr-api/issues"
+  },
+  "homepage": "https://github.com/craigharvi3/flickr-api#readme",
+  "devDependencies": {
+    "babel-core": "^5.8.25",
+    "babel-loader": "^5.3.2",
+    "css-loader": "^0.21.0",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "file-loader": "^0.11.2",
+    "node-sass": "^3.3.3",
+    "nodemon": "^1.11.0",
+    "request": "^2.81.0",
+    "sass-loader": "^3.0.0",
+    "style-loader": "^0.13.0",
+    "webpack": "^3.5.5"
+  },
+  "dependencies": {
+    "ajax-promise": "^0.8.1",
+    "express": "^4.15.3",
+    "node-jsonp": "^1.0.2",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.8.1",
+    "redux": "^3.6.0"
+  }
+}

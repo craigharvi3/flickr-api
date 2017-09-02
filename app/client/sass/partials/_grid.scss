@@ -1,0 +1,48 @@
+.grid {
+  padding-top: 1em;
+  clear: both;
+  margin-left: -2em;
+
+  [class*=col-], [class*=cols-] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 1em;
+    padding-bottom: 1em;
+    position: relative;
+    float: left;
+    padding-left: 2em;
+    padding-bottom: 2em;
+  }
+
+  @media(min-width: 850px) {
+    margin-left: -2em;
+
+    [class*=col-], [class*=cols-] {
+      padding-left: 2em;
+      padding-bottom: 2em
+    }
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    clear: both
+  }
+}
+
+.grid .col-4 {
+  width: 100%;
+
+  @media(min-width: 400px) {
+    width: 50%;
+  }
+
+  @media(min-width: 800px) {
+    width: 33.33%;
+  }
+
+  @media(min-width: 1280px) {
+    width: 25%;
+  }
+}

@@ -1,0 +1,16 @@
+.slat {
+  position: relative;
+  padding: 0 50px 0 0;
+
+  .slat-item {
+    position: absolute;
+    width: 50px;
+    top: 0;
+    right: 0;
+
+    &.bottom {
+      top: auto;
+      bottom: 0;
+    }
+  }
+}
