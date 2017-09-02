@@ -2,6 +2,12 @@
 
 ## Installation
 
+### Clone repo
+```
+git clone https://github.com/craigharvi3/flickr-api.git
+cd flickr-api
+```
+
 ### Install dependencies
 ```
 npm install
